@@ -19,7 +19,13 @@ def evaluate():
     model.eval()
     
     # Load tokenizer  
-    tokenizer = PreTrainedTokenizerFast(tokenizer_file="tokenizer.json")
+    tokenizer = PreTrainedTokenizerFast(
+        tokenizer_file="tokenizer.json",
+        pad_token="<pad>",
+        eos_token="<eos>",
+        unk_token="<unk>",
+        mask_token="<mask>"
+    )
     
     # Test data
     test_loader = create_dataloader('test', tokenizer, config)

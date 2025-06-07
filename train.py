@@ -18,8 +18,6 @@ def train():
     print(f"Using device: {device}")
     
     # Load tokenizer
-    # tokenizer = PreTrainedTokenizerFast(tokenizer_file="tokenizer.json")
-    # Load tokenizer
     tokenizer = PreTrainedTokenizerFast(
         tokenizer_file="tokenizer.json",
         pad_token="<pad>",
@@ -27,14 +25,6 @@ def train():
         unk_token="<unk>",
         mask_token="<mask>"
     )
-
-    # print("Special tokens:")
-    # print(f"  pad_token: {tokenizer.pad_token}")
-    # print(f"  eos_token: {tokenizer.eos_token}")
-    # print(f"  unk_token: {tokenizer.unk_token}")
-    # print(f"  mask_token: {tokenizer.mask_token}")
-    # print(f"  pad_token_id: {tokenizer.pad_token_id}")
-
     
     # Create model
     model = WikipediaTransformer(config).to(device)

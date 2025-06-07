@@ -16,9 +16,6 @@ def generate():
     model.load_state_dict(checkpoint['model_state_dict'])
     model.to(device)
     model.eval()
-    
-    # # Load tokenizer
-    # tokenizer = PreTrainedTokenizerFast(tokenizer_file="tokenizer.json")
 
     # Load tokenizer
     tokenizer = PreTrainedTokenizerFast(
