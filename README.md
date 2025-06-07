@@ -1,6 +1,6 @@
 # Wikipedia Language Model
 
-A simple transformer language model trained on Wikipedia text. Note: This project is for fun/educational purposes. It is not meant to be relied upon.
+A simple transformer language model trained on Wikipedia text.
 
 ## Quick Start
 
